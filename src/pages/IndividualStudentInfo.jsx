@@ -9,7 +9,7 @@ export const IndividualStudentInfo = () => {
   useEffect(() => {
     async function getStudent() {
       const response = await fetch(
-        `${import.meta.env.VITE_API_URL}/students${id}`
+        `${import.meta.env.VITE_API_URL}/students/${id}`
       );
       const data = await response.json();
       console.log(data);
