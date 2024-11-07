@@ -11,7 +11,6 @@ export function CreateStudent() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     const studentData = {
-      sId: id,
       firstName: firstName,
       lastName: lastName,
       school: school,
