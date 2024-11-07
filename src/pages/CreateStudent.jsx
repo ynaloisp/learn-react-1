@@ -18,7 +18,7 @@ export function CreateStudent() {
       major: major,
     };
     console.log(studentData);
-    await fetch("http://localhost:3000/students", {
+    await fetch(`${import.meta.env.VITE_API_URL}/students`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

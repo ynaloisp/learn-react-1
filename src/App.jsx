@@ -10,7 +10,7 @@ export default function App() {
   useEffect(() => {
     const fetchData = async () => {
       // const response = await fetch("https://json.link/oJbmHxLn8f.json");
-      const response = await fetch("http://localhost:3000/students");
+      const response = await fetch(`${import.meta.env.VITE_API_URL}/students`);
       const data = await response.json();
       console.log(data);
       setStudents(data);
@@ -41,7 +41,7 @@ export default function App() {
 
       <button
         onClick={async () => {
-          await fetch("http://localhost:3000/students", {
+          await fetch(`${import.meta.env.VITE_API_URL}/students`, {
             method: "POST",
             headers: {
               "Content-Type": "application/json",
